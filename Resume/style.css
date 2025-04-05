@@ -24,7 +24,12 @@ header nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 1.5rem;
+    /* flex-wrap: wrap; */
+}
+
+header i{
+    display: none !important;
 }
 
 header nav a{
@@ -62,7 +67,7 @@ header nav a:hover{
     color: #fff;
 }
 
-#social-media{
+.social-media{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,13 +76,13 @@ header nav a:hover{
     margin-top: 1rem;
 }
 
-#social-media a{
+.social-media a{
     text-decoration: none;
     color: #fff;
     transition: all 0.5s ease;
 }
 
-#social-media a:hover{
+.social-media a:hover{
     font-size: 2rem;
 }
 
@@ -317,5 +322,166 @@ header nav a:hover{
 }
 
 #contact{
-    background: url("image/background-image.png");
+    margin-top: 4rem;
+    background: linear-gradient(to top right, #1361d6,#1B3B4C);
+    padding: 2rem;
 }
+
+#contact h2{
+    color: #fff;
+    margin-bottom: 4rem;
+}
+
+.contact-flex{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 85%;
+    margin: auto;
+    gap: 3rem;
+}
+
+.contact-flex form{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.inputs{
+    background: none;
+    border: none;
+    border-bottom: 2px solid #fff;
+    padding: 0.7rem 1rem;
+    color: #fff;
+}
+
+.inputs:focus{
+    outline: none;
+    color: #fff;
+}
+
+.inputs::placeholder{
+    color: #e6e6e6;
+}
+
+.contact-flex form button{
+    background: none;
+    border: 2px solid #fff;
+    width: 40%;
+    align-self: center;
+    color: #fff;
+    padding: 0.7rem 1rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.contact-flex form button:hover{
+    background: #fff;
+    color: #1361d6;
+}
+
+.contact-info{
+    display: flex;
+    color: #fff;
+    flex-direction: column;
+}
+.contact-info h3{
+    margin-bottom: 1.5rem;
+}
+.contact-details p{
+    font-size: 1.2rem;
+}
+
+.contact-details p i{
+    display: inline-block;
+    margin-right: 1rem
+}
+
+.contact-social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    gap: 4rem;
+    margin-top: 1rem;
+}
+
+.contact-social-media a {
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+
+.contact-social-media a:hover {
+    font-size: 2rem;
+}
+
+@media screen and (max-width:1000px){
+    header nav{
+        gap: 0rem;
+    }
+    header nav a {
+        padding: 0.2rem 0.6rem;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .experience-list{
+        align-items: flex-end;
+        padding: 2rem 1rem;
+    }
+    .experience-item {
+        width: 100%;
+        margin-left: 2rem;
+    }
+    .experience-item:nth-child(2n) {
+        left: 0;
+    }
+    .divider {
+        left: 0%;
+    }
+    .contact-flex {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width:650px) {
+    header{
+        position: relative;
+        padding-top: 1.2rem;
+    }
+    header i {
+        display: block !important;
+        font-size: 2rem;
+        color: #fff;
+    }
+
+    nav {
+        display: none !important;
+        background-color: rgba(112, 111, 111, 0.37);
+        padding: 1rem;
+        position: absolute;
+        top: 25px;
+        left:-15%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        z-index: 100;
+        transition: all 0.6s ease;
+    }
+    .nav-wrapper{
+        position: relative;
+        left: 90%;
+    }
+    
+    .nav-wrapper:hover nav {
+        display: flex !important;
+        flex-direction: column;
+    }
+    .nav-wrapper i {
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+    
+}
+
+
