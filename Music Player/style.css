@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: rgb(219, 219, 219);
+}
+
+header h1{
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+}
+
+#container{
+    display: grid;
+    grid-template-columns: 1.5fr 2fr 1.5fr;
+    gap: 2rem;
+    justify-content: space-around;
+    padding: 2rem;
+}
+#container > div{
+    height: 100vh;
+}
+
+.blueBackground{
+    background-color: #6AB7DE;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0.2rem 0.2rem 0.6rem;
+}
+
+#all_songs p span{
+    font-size: 1.2rem;
+    margin-right: 0.6rem;
+}
+#all_songs p select{
+    background-color: rgba(82, 82, 82, 0.418);
+    padding: 0.3rem 0.8rem;
+    border-radius: 0.3rem;
+}
+
+#all_songs >h2{
+    margin: 1rem 0;
+}
+
+#nextPreviousButtons{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+}
+
+#nextPreviousButtons button,#songControls>button{
+    padding: 1rem 3rem;
+    background-color: #915BFD;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+#songControls>button{
+    padding: 1rem 2rem;
+    display: block;
+    margin: auto;
+    margin-top: 1rem;
+}
+
+#createPlaylist{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+#createPlaylist > input{
+    padding: 0.6rem;
+    /* box-shadow: 0.1rem 0.1rem 0.2rem black; */
+    border: 0.1rem solid black;
+}
+
+#createPlaylist>button {
+    background-color: #915BFD;
+    /* color: white; */
+    border: none;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+#playlistSection{
+    height: 93%;
+    width: 80%;
+}
+
+#playlistSection h2{
+    font-size: 1.3rem;
+}
+
+#songCard{
+    margin-bottom: 40px;
+}
+#songAudio{
+    display: block;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+#songPosterSection{
+    width: 90%;
+    background-color: #0472AA;
+    margin: auto;
+    border-radius: 1rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#songPoster{
+    width: 100%;
+    height: 280px;
+}
+
+.darkBlueButton{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    background-color: #0c86c4;
+    color: white;
+    border-radius: 8px;
+    padding: 0.4rem 1rem;
+    border: none;
+    width: 100%;
+    font-size: 1.2rem;
+    transition: 0.5s;
+}
+
+.songButton{
+    width: 250px;
+}
+
+.darkBlueButton:hover{
+    background-color: #6AB7DE;
+}
