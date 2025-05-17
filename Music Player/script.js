@@ -173,3 +173,67 @@ function addSongToPlaylist(index,currentPlaylistSongs) {
     
 }
 
+var theme = "Light";
+var toggleButton = document.getElementById("themeToggle");
+toggleButton.classList.add("light");
+
+var themeName = document.getElementById("themeName")
+themeName.textContent = "Dark";
+toggleButton.addEventListener("click", () => {
+    var blueSection = document.getElementsByClassName("blueBackground");
+    document.getElementById("songPosterSection").style.transition = "all 0.5s"
+    var toggleCircle = document.getElementById("toggleCircle");
+    toggleCircle.style.transition = "all 0.5s";
+    if (theme == "Light") {
+        toggleCircle.style.transform="translateX(24px)"
+        theme = "Dark";
+        themeName.textContent = "Light";
+        document.body.style.backgroundColor = "#8b8b8b";
+        document.getElementById("songPosterSection").style.backgroundColor = "#8b8b8b";
+        for (var i = 0; i < blueSection.length; i++){
+            blueSection[i].style.transition= "all 0.5s";
+            blueSection[i].style.backgroundColor="#5f5f5f"
+        }
+        toggleButton.style.backgroundColor = "#5fb2e9";
+    }
+    else {
+        toggleCircle.style.transform="translateX(0px)"
+        theme = "Light";
+        themeName.textContent = "Dark";
+        document.body.style.backgroundColor = "#dbdbdb";
+        document.getElementById("songPosterSection").style.backgroundColor = "#0472AA";
+        for (var i = 0; i < blueSection.length; i++){
+            blueSection[i].style.transition= "all 0.5s";
+            blueSection[i].style.backgroundColor = "#6AB7DE"
+        }
+        toggleButton.style.backgroundColor = "#b8b8b8";
+    }
+    changeButtonTheme(theme);
+});
+
+function changeButtonTheme(theme) {
+    var backgroundColor = "";
+    var hoverColor = "";
+    if (theme == "Dark") {
+        backgroundColor = "#8b8b8b"
+        hoverColor = "#5f5f5f";
+    }
+    else {
+        backgroundColor = "#0c86c4"
+        hoverColor = "#6AB7DE";
+    }
+
+    for (let sheet of document.styleSheets) {
+        for (rule of sheet.cssRules) {
+            if (rule.selectorText == ".darkBlueButton") {
+                rule.style.backgroundColor = backgroundColor;
+            }
+            if (rule.selectorText == ".darkBlueButton:hover") {
+                rule.style.backgroundColor = hoverColor;
+                return;
+            }
+        }
+    }
+
+}
+

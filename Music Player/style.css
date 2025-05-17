@@ -6,7 +6,7 @@
 }
 
 body{
-    background-color: rgb(219, 219, 219);
+    background-color: #dbdbdb;
 }
 
 header h1{
@@ -146,5 +146,40 @@ button:hover{
 }
 
 .darkBlueButton:hover{
-    background-color: #6AB7DE;
+    background-color: #5fb2e9;
 }
+
+#themeToggle{
+    width: 100px;
+    height: 35px;
+    border-radius: 2rem;
+    /* background-color: #0472AA; */
+    padding: 5px;
+    position: absolute;
+    right: 40px;
+    top: 20px;
+    
+}
+
+#toggleCircle{
+    display: inline-block;
+    background-color: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+#themeName{
+    position: absolute;
+    right: 7px;
+    top: 8px;
+}
+
+.light{
+    background-color: #b8b8b8;
+    color: white;
+    /* transition: 0.4s; */
+    /* transform: translateX(30px); */
+}
+
+
